@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- appointments23:19-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <title>المواعيد</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+	<!--Modal styling starts here-->
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<style>
+		.modal-confirm {		
+			color: #434e65;
+			width: 525px;
+		}
+		.modal-confirm .modal-content {
+			padding: 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+		}
+		.modal-confirm .modal-header {
+			background: #009efb;
+			border-bottom: none;   
+			position: relative;
+			text-align: center;
+			margin: -20px -20px 0;
+			border-radius: 5px 5px 0 0;
+			padding: 35px;
+		}
+		.modal-confirm h4 {
+			text-align: center;
+			font-size: 36px;
+			margin: 10px 0;
+		}
+		.modal-confirm .form-control, .modal-confirm .btn {
+			min-height: 40px;
+			border-radius: 3px; 
+		}
+		.modal-confirm .close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			color: #fff;
+			text-shadow: none;
+			opacity: 0.5;
+		}
+		.modal-confirm .close:hover {
+			opacity: 0.8;
+		}
+		.modal-confirm .icon-box {
+			color: #fff;		
+			width: 95px;
+			height: 95px;
+			display: inline-block;
+			border-radius: 50%;
+			z-index: 9;
+			border: 5px solid #fff;
+			padding: 15px;
+			text-align: center;
+		}
+		.modal-confirm .icon-box i {
+			font-size: 64px;
+			margin: -4px 0 0 -4px;
+		}
+		.modal-confirm.modal-dialog {
+			margin-top: 80px;
+		}
+		.modal-confirm .btn, .modal-confirm .btn:active {
+			color: #fff;
+			border-radius: 4px;
+			background: #009efb !important;
+			text-decoration: none;
+			transition: all 0.4s;
+			line-height: normal;
+			border-radius: 30px;
+			margin-top: 10px;
+			padding: 6px 20px;
+			border: none;
+		}
+		.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+			background: #0f4666 !important;
+			outline: none;
+		}
+		.modal-confirm .btn span {
+			margin: 1px 3px 0;
+			float: left;
+		}
+		.modal-confirm .btn i {
+			margin-left: 1px;
+			font-size: 20px;
+			float: right;
+		}
+		.trigger-btn {
+			display: inline-block;
+			margin: 100px auto;
+		}
+	</style>
+		<!--Modal styling ends here-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="Home.html" class="logo">
+					<img src="../assets/img/logo.png" width="35" height="35" alt=""> <span>Diabetic-Retionpathy</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown has-arrow">
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن ؟</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+							<img class="rounded-circle" src="../assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span style="color: white;">Bary</span>
+                    </a>
+					<div class="dropdown-menu">
+						
+						<a class="dropdown-item" href="edit-profile.html">تعديل الملف الشخصي</a>
+                    <a class="dropdown-item" href="index.html">تسجيل الخروج</a>
+					</div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    <a class="dropdown-item" href="Home.html">الصفحة الرئيسية</a>
+                    <a class="dropdown-item" href="about.html">من نحن؟</a>
+                    <a class="dropdown-item" href="contact.html">اتصل بنا</a>
+                    <a class="dropdown-item" href="news.html">الأخبار</a>
+                    <a class="dropdown-item" href="edit-profile.html">تعديل الملف الشخصي</a>
+                    <a class="dropdown-item" href="index.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li>
+                            <a href="Home.html"><i class="fa fa-dashboard"></i> <span>الصفحة الرئيسية</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>المواعيد</span></a>
+                        </li>
+						<li>
+                            <a href="reports.html"><i class="fa fa-flag-o"></i> <span>انشاء تقرير</span></a>
+                        </li>
+						<li>
+							<a href="posts.html"><i class="fa fa-commenting-o"></i> <span>انشاء منشور</span></a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content" style="padding: 30px;">
+                <div class="row">
+                    <div class="col-sm-12 col-3" style="text-align: center;">
+                        <h4 class="page-title">المواعيد</h4>
+                    </div>
+                    
+                </div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table class="table table-striped custom-table" id="MyTable">
+								<thead>
+									<tr>
+										<th>رقم الكشف</th>
+										<th>اسم المريض</th>
+										<th>السن</th>
+										<th>يوم الكشف</th>
+										<th> معاد الكشف</th>
+										<th class="text-center">قبول</th>
+										<th class="text-center">رفض</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>APT0001</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+									<tr>
+										<td>APT0002</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+                                    <tr>
+										<td>APT0003</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+									<tr>
+										<td>APT0004</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+                                    <tr>
+										<td>APT0005</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+									<tr>
+										<td>APT0006</td>
+										<td><img width="28" height="28" src="../assets/img/user.jpg" class="rounded-circle m-r-5" alt=""> Denise Stevens</td>
+										<td>35</td>
+										<td>30 Dec 2018</td>
+										<td>10:00am - 11:00am</td>
+										<td class="text-center"><a href="#myModal" class="custom-badge status-green" style="text-decoration-line: none;" data-toggle="modal"  onclick="deleteRow(this)">قبول</a></td>
+										<td class="text-center"><button type="button" class="custom-badge status-red" style="cursor: pointer;" onclick="deleteRow(this)">رفض</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+            </div>
+            
+    </div>
+
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog modal-confirm">
+			<div class="modal-content" style="background-color: #09151e;">
+				<div class="modal-header justify-content-center">
+					<div class="icon-box">
+						<i class="material-icons">&#xE876;</i>
+					</div>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body text-center">
+					<h4 style="color: white;">! عظيم</h4>	
+					<p style="color: white;">تم قبول الحجز بنجاح</p>
+					<button class="btn btn-success" data-dismiss="modal"><span>غلق</span></button>
+				</div>
+			</div>
+		</div>
+	</div>    
+
+    <div class="sidebar-overlay" data-reff=""></div>
+    <footer class="page-footer">
+        <div class="container">
+          
+    
+          <p id="copyright" style="text-align: right;">
+            
+            جميع الحقوق محفوظة لدى فريقنا
+          </p>
+        </div>
+      </footer>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+	<script>
+            $(function () {
+                $('#datetimepicker3').datetimepicker({
+                    format: 'LT'
+                });
+				$('#datetimepicker4').datetimepicker({
+                    format: 'LT'
+                });
+            });
+     </script>
+	 <script>
+		function deleteRow(r) {
+		  var i = r.parentNode.parentNode.rowIndex;
+		  document.getElementById("MyTable").deleteRow(i);
+		}
+		</script>
+</body>
+
+
+<!-- appointments23:20-->
+</html>

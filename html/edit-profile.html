@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- edit-profile23:03-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/theme.css">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="Home.html" class="logo">
+					<img src="../assets/img/logo.png" width="35" height="35" alt=""> <span>Diabetic-Retionpathy</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown has-arrow">
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن ؟</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+							<img class="rounded-circle" src="../assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span style="color: white;">Bary</span>
+                    </a>
+					<div class="dropdown-menu">
+						
+						<a class="dropdown-item" href="edit-profile.html">تعديل الملف الشخصي</a>
+						<a class="dropdown-item" href="index.html">تسجيل الخروج</a>
+					</div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    
+                    <a class="dropdown-item" href="Home.html">الصفحة الرئيسية</a>
+                    <a class="dropdown-item" href="about.html">من نحن؟</a>
+                    <a class="dropdown-item" href="contact.html">اتصل بنا</a>
+                    <a class="dropdown-item" href="news.html">الأخبار</a>
+                    <a class="dropdown-item" href="edit-profile.html">تعديل الملف الشخصي</a>
+                    <a class="dropdown-item" href="index.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li>
+                            <a href="Home.html"><i class="fa fa-dashboard"></i> <span>الصفحة الرئيسية</span></a>
+                        </li>
+                        <li>
+                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>المواعيد</span></a>
+                        </li>
+                        <li>
+                            <a href="reports.html"><i class="fa fa-flag-o"></i> <span>انشاء تقرير</span></a>
+                        </li>
+                        <li>
+                            <a href="posts.html"><i class="fa fa-commenting-o"></i> <span>انشاء منشور</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content" style="padding: 30px;">
+                <div class="row">
+                    <div class="col-sm-12" style="text-align: center;">
+                        <h4 class="page-title">تعديل الملف الشخصي</h4>
+                    </div>
+                </div>
+                <form>
+                    <div class="card-box">
+                        <h3 class="card-title" style="text-align: end;">معلومات عامة</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="profile-img-wrap">
+                                    <img class="inline-block" src="../assets/img/user.jpg" alt="user">
+                                    <div class="fileupload btn">
+                                        <span class="btn-text">تعديل</span>
+                                        <input class="upload" type="file" name="picture" id="pic">
+                                    </div>
+                                </div>
+                                <div class="profile-basic">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-focus">
+                                                <label class="focus-label">الأسم الأخير</label>
+                                                <input type="text" class="form-control floating" name="lastName" id="lname" value="Nasser" style="text-align: end;">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-focus">
+                                                
+                                                <label class="focus-label">الأسم الأول</label>
+                                                <input type="text" class="form-control floating" name="firstName" id="fname" value="Bary" style="text-align: end;">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-focus">
+                                                <label class="focus-label">تاريخ الميلاد</label>
+                                                <div class="cal-icon">
+                                                    <input class="form-control floating datetimepicker" type="text" name="birthDate" id="b_date" value="29/04/2000" style="text-align: end;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-focus select-focus"  style="text-align: end;" >
+                                                <label class="focus-label">النوع</label>
+                                                <select class="select form-control floating">
+                                                    <option value="male selected">ذكر</option>
+                                                    <option value="female">انثى</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title" style="text-align: end;">معلومات الاتصال</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">العنوان</label>
+                                    <input type="text" class="form-control floating" name="address" id="addrr" value="32 eissa elqatary st" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">المنطقة</label>
+                                    <input type="text" class="form-control floating" name="state" id="state" value="الوراق" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">المحافظة</label>
+                                    <input type="text" class="form-control floating" name="Governorate" id="gov" value="الجيزة" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">رقم الهاتف</label>
+                                    <input type="text" class="form-control floating" name="phone" id="phone" value="01001875849" style="text-align: end;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title" style="text-align: end;">معلومات التعليم</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">الجامعة</label>
+                                    <input type="text" class="form-control floating" name="university" id="uni" value="جامعة حلوان" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">التخصص</label>
+                                    <input type="text" class="form-control floating" name="subject" id="sub" value="الرمد" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">بداية الدراسة</label>
+									<div class="cal-icon">
+										<input type="text" class="form-control floating datetimepicker" name="startEducation" id="SEducation" value="24/09/2018" style="text-align: end;">
+									</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">انتهاء الدراسة</label>
+									<div class="cal-icon">
+										<input type="text" class="form-control floating datetimepicker" name="endEducation" id="Eeducation" value="15/07/2022" style="text-align: end;">
+									</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">الدرجة</label>
+                                    <input type="text" class="form-control floating" name="degree" id="deg" value="بكالريوس في قسم الرمد" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">التقدير</label>
+                                    <input type="text" class="form-control floating" name="grade" id="grade" value="امتياز مع مرتبة الشرف" style="text-align: end;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title" style="text-align: end;">معلومات الخبرة</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">اسم المستشفى</label>
+                                    <input type="text" class="form-control floating" name="hospiatal" id="hospital" value="مستشفى السلام العام" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">المركز</label>
+                                    <input type="text" class="form-control floating" name="location" id="loc" value="الوراق" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label"> إلى الفترة</label>
+									<div class="cal-icon">
+										<input type="text" class="form-control floating datetimepicker" name="to" id="to" value="20/09/2029" style="text-align: end;">
+									</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">في الفترة من </label>
+									<div class="cal-icon">
+										<input type="text" class="form-control floating datetimepicker" name="from" id="from" value="15/01/2023" style="text-align: end;">
+									</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">الوظيفة</label>
+                                    <input type="text" class="form-control floating" name="job" id="job" value="استشاري عيون" style="text-align: end;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <h3 class="card-title" style="text-align: end;">كلمة السر</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">كلمة السر القديمة</label>
+                                    <input type="password" name="oldPassword" id="oldPass" class="form-control floating" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">تأكيد كلمة السر</label>
+                                    <input type="password" name="confirmPassword" id="confirmPass" class="form-control floating" style="text-align: end;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group form-focus">
+                                    <label class="focus-label">كلمة السر الجديدة</label>
+                                    <input type="password" name="newPassword" id="newPass" class="form-control floating" style="text-align: end;">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="text-center m-t-20">
+                        <button class="btn btn-primary submit-btn" type="button">حفظ التعديلات</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <footer class="page-footer">
+        <div class="container">
+          
+    
+          <p id="copyright" style="text-align: right;">
+            
+            جميع الحقوق محفوظة لدى فريقنا
+          </p>
+        </div>
+      </footer>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+
+<!-- edit-profile23:05-->
+</html>
